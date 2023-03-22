@@ -1,11 +1,19 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
+let domainArray = [];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+function generateDomain(pronounArr, adjArr, nounArr) {
+  let domain = "";
+  for (let i = 0; i < adjArr.length; i++) {
+    for (let j = 0; j < pronounArr.length; j++) {
+      for (let k = 0; k < nounArr.length; k++) {
+        domain = `${pronounArr[j]}${adjArr[i]}${nounArr[k]}.com`;
+        domainArray.push(domain);
+      }
+    }
+  }
+  return domainArray;
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+console.log(generateDomain(pronoun, adj, noun));
