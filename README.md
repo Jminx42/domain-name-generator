@@ -1,51 +1,48 @@
-# Hello World with Vanilla JS
+# The Domain Name Generator
 
-Start coding a JS/HTML/CSS website in 30 seconds by opening this template in codespaces (coming soon) or [gitpod](https://gitpod.io#https://github.com/4GeeksAcademy/vanillajs-hello.git).
-
-## Before you being
-
-Install the packages by typing: `npm install`.
+Finding a domain name is hard, why not automate it? :)
 
 
-### How do I run my website to see live changes?  
+## 📝 Instructions
 
+Create a script that generate all the possible domain name combinations
+from a list of pronouns, adjectives and nouns, for example:
 
-Type on the command line `$ npm run start` and type localhost on the browser.
-
-### Where do I write my code?  
-
-It depends on the language, but you have `./src/js/app.js`, `./src/style/index.css` and `./isrc/index.html` respectively, you can add new `.html` as you please, just make sure to include import it on the index.js.
-
-> Note: remember that the JS workflow starts inside `window.onload`.
-
-
-## Troubleshooting
-
-### I don't see my changes...
-
-Everytime you change any file inside the `./src` folder the website public URL will automatically refresh the changes (it's a process called hot deploy)
-Remember also to refresh cleaning the cache (command+shift+r on mac, control+shift+r on pc & linux)
-
-### How do I include more images on my project?
-
-Add them inside the `./src/assets/img` folder and import them from any of your JS files. E.g: `import "../assets/img/rigo-baby.jpg";`
-
-### How do I include more JS files?
-
-Just add the files into the JS folder and import the file/variables into your index.js. E.g: `import myVar from "./file2.js"`
-
-### How do I publish the website?
-
-This boilerplate is 100% compatible with the free github pages hosting. Publish your website by running:
-
-```sh
-$ npm run deploy
+```js
+  let pronoun = ['the','our'];
+  let adj = ['great', 'big' ];
+  let noun = ['jogger','racoon'];
 ```
 
-Very easy and in just one step!  Push to your __main__ branch and use the free hosting that comes with [GitHub pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages), the project is ready to be published. Remember to choose to run the Github Page from your master branch.
+Should generate something like:
 
-### Contributors
+```bash
+thegreatjogger.com
+thegreatracoon.com
+ourgreatjogger.com
+ourgreatracoon.com
+thebigjogger.com
+thebigracoon.com
+ourbigjogger.com
+ourbigracoon.com
+```
 
-This template was built as part of the [Full Stack Developer course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer) at [4Geeks Academy Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/vanillajs-hello/graphs/contributors).
+### 💡Hint
 
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
+You'll need to use nested for loops in order to mix the different values together.
+
+Your tools: For loop, string concatenation.
+
+## 😎 Feeling confident?
+
+- Add several types of extensions: .com, .net, .us, .io, etc.
+- Add domain hacks, for example: instead of `lastOfUs.com` you can use the `.us` domain like this: `lastOf.us`
+
+## A bit of history about the project
+
+Before the domain market was centralized and converted into a mafia 
+controlled by Godaddy, Enom and some others. Normal people like you and me 
+were able to buy a .com domain relatively easy. 
+
+In fact, this project was originally built in 2002 by one of 4Geeks teachers 
+while he was trying to find domain names to buy for several projects.
