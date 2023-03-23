@@ -2,6 +2,11 @@
 
 Finding a domain name is hard, why not automate it? :)
 
+## Before starting
+Install the packages by typing: npm install.
+
+## How do I run my website to see live changes?
+Type on the command line $ npm run start and type localhost on the browser.
 
 ## 📝 Instructions
 
@@ -38,11 +43,7 @@ Your tools: For loop, string concatenation.
 - Add several types of extensions: .com, .net, .us, .io, etc.
 - Add domain hacks, for example: instead of `lastOfUs.com` you can use the `.us` domain like this: `lastOf.us`
 
-## A bit of history about the project
+## Technologies used
 
-Before the domain market was centralized and converted into a mafia 
-controlled by Godaddy, Enom and some others. Normal people like you and me 
-were able to buy a .com domain relatively easy. 
-
-In fact, this project was originally built in 2002 by one of 4Geeks teachers 
-while he was trying to find domain names to buy for several projects.
+Javascript for the project.
+There is a html and css file but nothing was changed from the boilerplate template.
