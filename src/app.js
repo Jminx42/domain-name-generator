@@ -1,19 +1,25 @@
 let pronoun = ["the", "our"];
 let adj = ["great", "big"];
 let noun = ["jogger", "racoon"];
-let domainArray = [];
+let extensions = [".com", ".net", ".us", ".io"];
 
-function generateDomain(pronounArr, adjArr, nounArr) {
+function generateDomain(pronounArr, adjArr, nounArr, extensionsArr) {
   let domain = "";
+  let array = [];
   for (let i = 0; i < adjArr.length; i++) {
     for (let j = 0; j < pronounArr.length; j++) {
       for (let k = 0; k < nounArr.length; k++) {
-        domain = `${pronounArr[j]}${adjArr[i]}${nounArr[k]}.com`;
-        domainArray.push(domain);
+        for (let l = 0; l < extensions.length; l++) {
+          domain = `${pronounArr[j]}${adjArr[i]}${nounArr[k]}${extensionsArr[l]}`;
+          array.push(domain);
+        }
       }
     }
   }
-  return domainArray;
+  return array;
 }
 
-console.log(generateDomain(pronoun, adj, noun));
+const domainArray = generateDomain(pronoun, adj, noun, extensions);
+
+domainArray.forEach(element => console.log(element));
+// console.log(domainArray);
